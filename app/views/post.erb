@@ -1,0 +1,14 @@
+<div class="container"> 
+  <h1>See what other people are posting about</h1>
+  <% @posts.each do |post| %>
+  
+	  <p><%= post.title %></p>
+	  <p><%= post.body %></p>
+	  <p>Author: <%= post.author %>,
+	  	<%post.tags.each do |tag| %>
+	    Tags: <%= tag.name %>
+	    <% end %> 
+	  </p>
+	  <% end %>
+
+</div>
