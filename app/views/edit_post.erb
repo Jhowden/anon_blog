@@ -1,0 +1,19 @@
+<div class="container"> 
+	<h2>Enter what you would like to change</h2>
+	<p>You are about to edit '<%=@edit_post.title%>' post.</p>
+
+  <form action="/edited post/<%=@edit_post.id%>" method='POST'>
+	  <label for='post_title'>Post Title</label>
+	  <input type='text' id='post_title' name='listing[title]'>
+	  <br>
+	  <label for='post_body'>Post Body</label>
+	  <textarea cols="40" rows="5" name='listing[body]'>
+      Enter post
+	  </textarea>
+	  <input type='submit'>
+  </form>
+  <br>
+  <a href='/'>Return to homepage</a>
+
+
+</div>

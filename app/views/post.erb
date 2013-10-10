@@ -7,8 +7,11 @@
 	  <p>Author: <%= post.author %>,
 	  	<%post.tags.each do |tag| %>
 	    Tags: <%= tag.name %>
-	    <% end %> 
+	    <% end %> <a href='/edit post/<%=post.id%>'>Edit</a> <a href="/delete post/#{post.id}">Delete</a>
 	  </p>
-	  <% end %>
+	 <% end %>
+  
+  <a href='/'>Return to home page</a>
+
 
 </div>
