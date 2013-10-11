@@ -1,0 +1,11 @@
+<div class="container"> 
+  <h1>Here are all of the related posts with <%= @tag_name.name %></h1>
+
+  <% @tag_name.posts.each do |post| %>
+	  <a href='/post found/<%= post.id %>'> <p><%= post.title %></p></a>
+	<% end %>
+  
+  <a href='/'>Return to home page</a>
+
+
+</div>

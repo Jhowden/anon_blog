@@ -5,9 +5,10 @@
 	  <p><%= post.title %></p>
 	  <p><%= post.body %></p>
 	  <p>Author: <%= post.author %>,
+	  	Tags:
 	  	<%post.tags.each do |tag| %>
-	    Tags: <%= tag.name %>
-	    <% end %> <a href='/edit post/<%=post.id%>'>Edit</a> <a href="/delete post/#{post.id}">Delete</a>
+	     <%= tag.name %>
+	    <% end %> <p><a href='/edit post/<%=post.id%>'>Edit</a>  <form action='delete post/<%=post.id%>' method='POST'> <input type='submit' value='Delete' id="shit"> </form></p>
 	  </p>
 	 <% end %>
   
