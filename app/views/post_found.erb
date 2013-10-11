@@ -1,8 +1,10 @@
 <div class="container"> 
-  <p><%= @found_post.title %></p>
-  <p><%= @found_post.body %></p>
-  <p><%= @found_post.author %></p>
-</div>
-<div>
+  <strong>Title: </strong> <p><%= @found_post.title %></p>
+  <strong>Body:</strong> <p><%= @found_post.body %></p>
+  <strong>Author: </strong> <p><%= @found_post.author %></p>
+  <strong>Tags: </strong> <%@found_post.tags.each do |tag| %>
+  	<p><%= tag.name %> </p>
+  	<% end %>
+  <br>
   <a href='/'>Return to homepage</a>
 </div>

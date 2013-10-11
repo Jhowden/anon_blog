@@ -22,8 +22,13 @@ get '/post found/:id'do
 end
 
 post '/search posts' do
-	post_id = params[:id]
-	redirect to "/post found/#{post_id}"
+	if Post.exists?(params[:id])
+		post = Post.find(params[:id])
+		post_id = post.id
+	  redirect to "/post found/#{post_id}"
+	else
+  	redirect to '/'
+	end
 end
 
 post '/edited post/:post_id' do
@@ -45,15 +50,5 @@ post '/created post' do
     tag = Tag.find_or_create_by_name(tag)
     created_post.tags << tag
   end
-	# tags.each do |tag|
-	# 	if tag == Tag.find_by_name(name: tag)
-	# 		created_post.tags << Tag.find_by_name(name: tag).id
-	# 	else
-	# 		new_tag = Tag.create(name: tag)
-	# 		created_post.tags << new_tag
-	# 	end
-	# end
-
   redirect to '/show posts'
-
 end
