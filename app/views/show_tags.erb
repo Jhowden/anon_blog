@@ -1,4 +1,4 @@
-<div class="container"> 
+
   <h1>Click a tag to see all of the related tags</h1>
   <% @tags.each do |tag| %>
 	  <a href='/tag/<%= tag.id %>'> <p><%= tag.name %> </p> </a>
@@ -7,4 +7,3 @@
   <a href='/'>Return to home page</a>
 
 
-</div>

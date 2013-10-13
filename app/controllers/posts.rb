@@ -3,6 +3,7 @@ get '/show posts' do
 	erb :post
 end
 
+
 get '/find post' do
   erb :find_post
 end
@@ -13,7 +14,11 @@ end
 
 get '/edit post/:post_id' do
 	@edit_post = Post.find(params[:post_id])
-  erb :edit_post
+	if request.xhr?
+		erb :_edit_form, layout: false
+	else
+    erb :edit_post
+  end
 end
 
 get '/post found/:id'do
