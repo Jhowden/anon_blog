@@ -1,9 +1,81 @@
+body {
+  background-image: url(http://static.euronews.com/articles/228098/606x341_228098.jpg?1371056058);
+  /*background-repeat: no-repeat;*/
+  background-size: 100%;
+}
 .container {
   margin: 20px auto;
   width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  opacity: .85;
+  /*padding: 0px 20px 20px 20px;*/
+  padding-left: 0;
+  padding-right: 0;
+  border: 1px solid black;
+  border-radius: 10px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(149,149,149,1)), color-stop(46%,rgba(13,13,13,1)), color-stop(50%,rgba(1,1,1,1)), color-stop(53%,rgba(10,10,10,1)), color-stop(76%,rgba(78,78,78,1)), color-stop(87%,rgba(56,56,56,1)), color-stop(100%,rgba(27,27,27,1)));
 }
-th {
+
+.container h1, p {
+  text-align: center;
+  color: #CFCFCF;
+}
+
+.posts_list, .create_click {
+  text-align: center;
+}
+
+a:link {
+  display: block;
+  text-decoration: none;
+  color: #CFCFCF;
+}
+
+.container a:active, a:visited {
+  color: #CFCFCF;
+}
+ul {
+  padding-right: 40px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.edit_click {
   text-align: left;
+  margin-top: 5px;
+}
+
+.post_title {
+  color: #f5f9f0;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-bottom: 1px solid white;
+}
+
+.post_body {
+  line-height: 1.5;
+  margin-bottom: 10px;
+  color: #f5f9f0;
+}
+
+.post_extras {
+  font-weight: bold;
+  border-top: 1px solid white;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  color: #f5f9f0;
+}
+
+.post_tags {
+  font-weight: bold;
+  color: #f5f9f0;
+  margin-bottom: 10px;
+}
+.post_items {
+  color: #f5f9f0;
+}
+
+.return .return_home {
+  color: #999999;
 }

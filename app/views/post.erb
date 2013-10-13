@@ -1,15 +1,19 @@
 
   <h1>See what other people are posting about</h1>
   <% @posts.each do |post| %>
+  <ul>
   
-	  <p><%= post.title %></p>
-	  <p><%= post.body %></p>
-	  <p>Author: <%= post.author %>,
-	  	Tags:
-	  	<%post.tags.each do |tag| %>
-	     <%= tag.name %>
-	    <% end %> <p><a class='edit_click' href='/edit post/<%=post.id%>'>Edit</a>  <form action='delete post/<%=post.id%>' method='POST'> <input type='submit' value='Delete' id="shit"> </form></p>
-	  </p>
+	  <li class="post_title"><%= post.title %></li>
+	  <li class="post_body"><%= post.body %></li>
+	  <li class="post_extras">Author: <%= post.author %>
+	  	<li class="post_tags">Tags:</li>
+  	  	<li class="post_items"><%post.tags.each do |tag| %>
+  	     <%= tag.name %>
+  	    <% end %></li>
+      <li><a class='edit_click' href='/edit post/<%=post.id%>'>Edit</a>  <form action='delete post/<%=post.id%>' method='POST'> <input type='submit' value='Delete' id="shit"> </form></li>
+	  </li>
+  </ul>
 	 <% end %>
-  
-  <a href='/'>Return to home page</a>
+<div class="return">
+  <a class="return_home" href='/'>Return to home page</a>
+</div>
