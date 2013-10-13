@@ -44,6 +44,7 @@ li {
 .edit_click {
   text-align: left;
   margin-top: 5px;
+  width: 30px;
 }
 
 .post_title {
@@ -78,4 +79,5 @@ li {
 
 .return .return_home {
   color: #999999;
+  width: 150px;
 }
